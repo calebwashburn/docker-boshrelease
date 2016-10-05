@@ -1,0 +1,7 @@
+---
+name: docker-volume-netshare
+
+dependencies: []
+
+files:
+- docker-volume-netshare/docker-volume-netshare_0.30_linux_amd64.tar.gz  # from https://github.com/ContainX/docker-volume-netshare/releases/download/v0.30/docker-volume-netshare_0.30_linux_amd64.tar.gz
