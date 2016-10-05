@@ -1,6 +1,7 @@
 # abort script on any command that exits with a non zero value
 set -ex
 
+echo "Packaging docker-volume-share"
 # We grab the latest versions that are in the directory
 DOCKER_VOLUME_NETSHARE_VERSION=`ls -r docker-volume-netshare/docker-volume-netshare_*_linux_amd64.tar.gz | sed 's/docker-volume-netshare\/docker-volume-netshare_\(.*\)_linux_amd64.tar.gz/\1/' | head -1`
 
