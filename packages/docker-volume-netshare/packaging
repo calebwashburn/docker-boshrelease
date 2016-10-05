@@ -14,3 +14,8 @@ if [[ $? != 0 ]] ; then
 fi
 
 ls -al
+
+echo "Copying docker-volume-netshare ${DOCKER_VOLUME_NETSHARE_VERSION} binaries..."
+mkdir -p ${BOSH_INSTALL_TARGET}/bin
+cp docker-volume-netshare//* ${BOSH_INSTALL_TARGET}/bin
+chmod +x ${BOSH_INSTALL_TARGET}/bin/*
