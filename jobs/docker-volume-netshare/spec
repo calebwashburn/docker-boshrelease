@@ -8,3 +8,5 @@ packages:
 templates:
   bin/docker-volume-netshare_ctl: bin/docker-volume-netshare_ctl
   bin/job_properties.sh.erb: bin/job_properties.sh
+
+properties: {}

@@ -18,9 +18,12 @@ case $1 in
     rm -fr ${DOCKER_VOLUME_NETSHARE_PID_FILE}
 
     # Start docker-volume-netshare
-    exec chpst -u vcap:vcap docker-volume-netshare nfs \
-        >>${DOCKER_VOLUME_NETSHARE_LOG_DIR}/${OUTPUT_LABEL}.stdout.log \
-        2>>${DOCKER_VOLUME_NETSHARE_LOG_DIR}/${OUTPUT_LABEL}.stderr.log
+    docker-volume-netshare nfs \
+      >>${DOCKER_VOLUME_NETSHARE_LOG_DIR}/${OUTPUT_LABEL}.stdout.log \
+      2>>${DOCKER_VOLUME_NETSHARE_LOG_DIR}/${OUTPUT_LABEL}.stderr.log &
+      
+    PID=$!
+    echo $PID > ${DOCKER_VOLUME_NETSHARE_PID_FILE}
     ;;
 
   stop)

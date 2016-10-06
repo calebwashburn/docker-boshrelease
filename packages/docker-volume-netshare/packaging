@@ -1,5 +1,5 @@
 # abort script on any command that exits with a non zero value
-set -ex
+set -e
 
 echo "Packaging docker-volume-share"
 # We grab the latest versions that are in the directory
@@ -17,5 +17,5 @@ ls -al
 
 echo "Copying docker-volume-netshare ${DOCKER_VOLUME_NETSHARE_VERSION} binaries..."
 mkdir -p ${BOSH_INSTALL_TARGET}/bin
-cp docker-volume-netshare//* ${BOSH_INSTALL_TARGET}/bin
+cp docker-volume-netshare_*_linux_amd64/docker-volume-netshare ${BOSH_INSTALL_TARGET}/bin
 chmod +x ${BOSH_INSTALL_TARGET}/bin/*
