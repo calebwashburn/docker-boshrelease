@@ -9,4 +9,10 @@ templates:
   bin/docker-volume-netshare_ctl: bin/docker-volume-netshare_ctl
   bin/job_properties.sh.erb: bin/job_properties.sh
 
-properties: {}
+properties:
+  nfs.version:
+    description: "version of nfs 3 or 4 are valid options"
+    default: "3"
+  nfs.options:
+    description: "nfs mount options"
+    default: "port=2049,nolock"
