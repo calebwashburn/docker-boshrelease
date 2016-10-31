@@ -8,8 +8,8 @@ export DOCKER_VOLUME_NETSHARE_PID_FILE=${DOCKER_VOLUME_NETSHARE_PID_DIR}/docker-
 
 export PATH=/var/vcap/packages/docker-volume-netshare/bin:$PATH
 
-NFS_VERSION: <%= p('nfs.version') %>
-NFS_OPTIONS: <%= p('nfs.options') %>
+export NFS_VERSION=<%= p('nfs.version') %>
+export NFS_OPTIONS=<%= p('nfs.options') %>
 
 case $1 in
 
